@@ -1,0 +1,65 @@
+.card-container {
+    position: relative; /* Set container position to relative */
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Introduction {
+    top: 100px; /* Adjust top position as needed */
+    left: 550px; /* Adjust left position to move the Introduction section to the right */
+    width: 380px;
+    height: 50vh;
+    border-radius: 3vh;
+    border-width: .3vh;
+    border-style: solid;
+    border-color: white;
+    background-color: #171a27;
+    box-sizing: border-box;
+    padding: 20px;
+    position: absolute; /* Set position to absolute */
+}
+
+.Plans {
+    top: 100px; /* Adjust top position as needed */
+    right: 550px; /* Adjust right position to move the Plans section to the left */
+    width: 380px;
+    height: 50vh;
+    border-radius: 3vh;
+    border-width: .3vh;
+    border-style: solid;
+    border-color: white;
+    background-color: #171a27;
+    box-sizing: border-box;
+    padding: 20px;
+    position: absolute; /* Set position to absolute */
+}
+
+.introtext {
+    color: rgb(73, 230, 120);
+    font-size: clamp(1vh, 3vh, 6vh);
+    font-family: Komyca3D;
+}
+
+.introdescription {
+    color: rgb(241, 241, 241);
+    font-size: clamp(1vh, 2vh, 3vh);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+}
+
+/* Media query for smaller devices */
+@media screen and (max-width: 767px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Introduction,
+    .Plans {
+        width: 100%;
+        position: static; /* Reset position for smaller screens */
+        margin-left: 0; /* Reset margin */
+        margin-right: 0; /* Reset margin */
+    }
+}

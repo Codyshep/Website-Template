@@ -1,0 +1,127 @@
+body {
+    background-color: #12141d;
+    height: 200vh; /* Increase the body height for more scroll room */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+button {
+    background-color: #80191900;
+    border-radius: 10px;
+    border-color: rgb(55, 224, 106);
+    border-style: double;
+    font-size: 20px;
+    margin: 0 10px;
+    margin-top: 5px;
+}
+
+
+button a {
+    color: rgb(214, 214, 214);
+    font-weight: 510;
+    text-decoration: none;
+}
+
+button:hover a {
+    color: rgb(156, 134, 253);
+}
+
+.NavBar {
+    position: fixed;
+    top: 30px; /* Adjust the distance from the top */
+    right: -35px; /* Adjust the distance from the left */
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-right: 50px; /* Adjust the margin to move the navbar to the right */
+    z-index: 1000;
+}
+
+.collapseNav {
+    display: none;
+}
+
+.CollapsedButtons {
+    display: none; /* Hide the buttons by default */
+}
+
+.CollapsedButtons.show {
+    display: block; /* Display the collapsed buttons when the .show class is applied */
+}
+
+.NavBar-Collapse {
+    position: fixed;
+    top: 70px; /* Adjust the distance from the top */
+    right: 20px; /* Adjust the distance from the left */
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-right: 50px; /* Adjust the margin to move the navbar to the right */
+    z-index: 1000;
+}
+
+.NavBar-Collapse .collapseNav {
+    position: absolute;
+    color: white;
+    bottom: 0px;
+    height: 30px;
+    width: 30px;
+}
+
+.NavBar-Collapse .CollapsedButtons .button1 {
+    position: absolute;
+    padding-right: 44px;
+    top: 5px; /* Adjust the distance from the top for button 1 */
+    right: -55px;
+    background-color: rgb(22, 22, 22);
+}
+
+.NavBar-Collapse .CollapsedButtons .button2 {
+    position: absolute;
+    top: 45px; /* Adjust the distance from the top for button 3 */
+    right: -55px;
+    background-color: rgb(22, 22, 22);
+}
+
+.NavBar-Collapse .CollapsedButtons .button3 {
+    position: absolute;
+    padding-right: 28px;
+    top: 85px; /* Adjust the distance from the top for button 3 */
+    right: -55px;
+    background-color: rgb(22, 22, 22);
+}
+
+
+.logoimg {
+    position: fixed;
+    top: 35px;
+    left: 25px;
+    width: 250px;
+    height: 40px;
+    z-index: 1000;
+}
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 767px) {
+
+    .NavBar {
+        display: none;
+    }
+    .collapseNav {
+        display: block;
+        left: -10px;
+        box-shadow: 0 0 0 3px rgb(55, 224, 106);
+        transform-box: view-box;
+        box-sizing: content-box;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .NavBar-Collapse {
+        display: none;
+    }
+}
+  
