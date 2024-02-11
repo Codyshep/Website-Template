@@ -1,28 +1,12 @@
 .card-container {
+    display: flex;
+    justify-content: center; /* Center the cards horizontally */
     position: relative; /* Set container position to relative */
     margin-top: 100px;
-    display: flex;
-    justify-content: space-around;
 }
 
-.Introduction {
-    top: 100px; /* Adjust top position as needed */
-    left: 550px; /* Adjust left position to move the Introduction section to the right */
-    width: 380px;
-    height: 50vh;
-    border-radius: 3vh;
-    border-width: .3vh;
-    border-style: solid;
-    border-color: white;
-    background-color: #171a27;
-    box-sizing: border-box;
-    padding: 20px;
-    position: absolute; /* Set position to absolute */
-}
-
+.Introduction,
 .Plans {
-    top: 100px; /* Adjust top position as needed */
-    right: 550px; /* Adjust right position to move the Plans section to the left */
     width: 380px;
     height: 50vh;
     border-radius: 3vh;
@@ -32,7 +16,7 @@
     background-color: #171a27;
     box-sizing: border-box;
     padding: 20px;
-    position: absolute; /* Set position to absolute */
+    margin: 0 10px; /* Add margin between the cards */
 }
 
 .introtext {
@@ -52,14 +36,12 @@
 @media screen and (max-width: 767px) {
     .card-container {
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* Center the cards vertically */
     }
 
     .Introduction,
     .Plans {
         width: 100%;
-        position: static; /* Reset position for smaller screens */
-        margin-left: 0; /* Reset margin */
-        margin-right: 0; /* Reset margin */
+        margin: 10px 0; /* Adjust margin for smaller screens */
     }
 }

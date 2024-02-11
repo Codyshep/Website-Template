@@ -1,6 +1,6 @@
 body {
     background-color: #12141d;
-    height: 200vh; /* Increase the body height for more scroll room */
+    height: 100vh; /* Increase the body height for more scroll room */
     overflow-y: auto; /* Enable vertical scrolling */
 }
 
